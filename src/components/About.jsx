@@ -9,7 +9,7 @@ function About() {
     <>
       <Row>
         <h1 className="ls-5 text-white fw-400 fs-75">
-          ABOUT <span className="fw-700 text-orange">BMI TRACKER</span>{" "}
+          ABOUT <span className="fw-700 text-orange">BMI TRACKERRRR</span>{" "}
         </h1>
       </Row>
 

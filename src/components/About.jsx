@@ -7,20 +7,20 @@ import logos from "../data/logo.js";
 function About() {
   const aboutInfo = about.info.map((item, index) => (
     <>
-      <Row>
+      <Row className='col-sm-12'>
         <h1 className="ls-5 text-white fw-400 fs-75">
-          ABOUT <span className="fw-700 text-orange">BMI TRACKERRRR</span>{" "}
+          ABOUT <span className="fw-700 text-orange">BMI TRACKER</span>{" "}
         </h1>
       </Row>
 
-      <Row>
+      <Row className='col-sm-12'>
         <p className="text-white mt-3">{item.paragraphOne}</p>
       </Row>
 
-      <Row>
+      <Row className='col-sm-12'>
         <p className="text-white mt-3">{item.paragraphTwo}</p>
       </Row>
-      <Row>
+      <Row className='col-sm-12'>
         <p className="text-white mt-3">{item.paragraphThree}</p>
       </Row>
     </>
@@ -47,14 +47,14 @@ function About() {
     <>
       <Container className="mt-5">
         {aboutInfo}
-        <Row className="d-flex flex-column mt-5">
+        <Row className="d-flex flex-column mt-5 col-sm-12">
           <h3 className="text-orange">Features</h3>
           <ul className="text-white mt-3 list-unstyled ">{features}</ul>
         </Row>
       </Container>
       <Container fluid>
         <p className="text-orange ls-5 text-center mt-5 fs-23 ">POWERED BY </p>
-        <Row className="d-flex mt-5  justify-content-around">{logosInfo}</Row>
+        <Row className="d-flex mt-5  justify-content-around col-sm-12">{logosInfo}</Row>
       </Container>
     </>
   );

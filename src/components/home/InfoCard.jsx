@@ -34,7 +34,7 @@ const InfoCard = ({ infos, deleteCard }) => {
               </Col>
             </Row>
             <Row>
-              <h2 id="yourInfo" className="mx-auto fw-600">YOUR INFORMATIONS</h2>
+              <h2 className="mx-auto fw-600 text-center">YOUR INFORMATIONS</h2>
             </Row>
 
             <Row className="px-3 py-3 text-center ">

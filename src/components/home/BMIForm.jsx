@@ -73,9 +73,9 @@ const BMIForm = ({ change }) => {
 
           <Row className="d-flex justify-content-center mt-4">
             <Button
-              id = "calculate"
+
               class=" btn btn-primary"
-              variant="primary rounded-pill  px-4 py-2 ls-2"
+              variant="primary rounded-pill  px-4 py-2 mx-4 ls-2 mt-3"
               type="submit"
               disabled={state.weight === "" || state.height === ""}
               onClick={handleSubmit}
@@ -84,9 +84,9 @@ const BMIForm = ({ change }) => {
             </Button>
             <Link to={"/infobmi"}>
               <Button
-                id = "whatIs"
-                class="btn btn-info "
-                variant="info rounded-pill mx-4 ls-2"
+
+                class="btn btn-info  "
+                variant="info rounded-pill  px-4 py-2 mx-4 ls-2  mt-3"
                 type="submit"
               >
                 What is BMI?

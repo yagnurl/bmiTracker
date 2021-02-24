@@ -20,11 +20,6 @@ const Context = () => {
     let newData = { date, bmi };
     setData(newData);
 
-
-
-
-
-
   }, [state]);
 
   const handleChange = (val) => {

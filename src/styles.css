@@ -106,11 +106,23 @@ Button:active {
   display: "block";
   content: "\02630" !important;
 }
-
+.brand{
+  max-width: 140px;
+}
 .logo {
-  max-width: 200px;
+  max-width: 180px;
   max-height: auto;
   object-fit: contain;
+  filter: grayscale(100%);
+}
+.logo:hover {
+  max-width: 180px;
+  max-height: auto;
+  object-fit: contain;
+  filter: grayscale(0%);
+ cursor: pointer;
+ transition: all 0.8s ease;
+ transform: translateY(-10%);
 }
 
 .bg-none {
@@ -121,15 +133,15 @@ Button:active {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
 }
 
-@media screen and (max-width:380) {
+/* @media screen and (max-width:380) {
   #calculate{margin-bottom:10px !important;}  
 }
 
-@media screen and (max-width:380) {
+/* @media only screen and (max-width:440) {
   #whatIs{margin-top:10px !important;}  
-}
+} */
 
-@media screen and (max-width:380) {
+/* @media screen and (max-width:380) {
   #yourInfo{margin-left: 10px  !important;}  
 }
 @media screen and (max-width:380) {
@@ -149,7 +161,7 @@ Button:active {
 }
 @media screen and (max-width:380) {
   .aboutP1{margin-left: auto !important;}  
-}
+} */ 
 
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import PropTypes from "prop-types";
+
 
 const LineChart = ({ labelData, bmiData }) => {
   const data = (canvas) => {
@@ -8,17 +8,15 @@ const LineChart = ({ labelData, bmiData }) => {
     let gradient = ctx.createLinearGradient(63, 81, 181, 700);
     gradient.addColorStop(0, "#929dd9");
     gradient.addColorStop(1, "#172b4d");
-    console.log(`bmiData: ${bmiData}`);
+    // console.log(`bmiData: ${bmiData}`);
     return {
       labels: labelData,
       datasets: [
         {
           label: "Your BMI",
           fontSize: 18,
-          // data: ["25"],
           data: bmiData,
           backgroundColor: gradient,
-
           borderColor: "#98acf8",
           pointRadius: 8,
           pointHoverRadius: 10,
@@ -30,13 +28,15 @@ const LineChart = ({ labelData, bmiData }) => {
   };
   const options = {
     responsive: true,
+
     scales: {
-      yAxes: [
+      xAxes: [
         {
           scaleLabel: {
+            margin: '5px',
             display: true,
             labelString: "Date",
-            fontSize: 18,
+            fontSize: 20,
             fontColor: "white"
           },
           gridLines: {
@@ -45,18 +45,20 @@ const LineChart = ({ labelData, bmiData }) => {
           },
 
           ticks: {
-            beginAtZero: false,
-            fontColor: "black",
-            fontSize: 6
+            beginAtZero: true,
+            fontColor: "#F2A154",
+            fontSize: 16
           }
         }
       ],
       yAxes: [
         {
           scaleLabel: {
+            fontFamily: 'Poppins',
             display: true,
-            labelString: "BMI INDEX",
-            fontSize: 30,
+            labelString: "BODY MASS INDEX",
+            fontSize: 25,
+
             fontColor: "#F2A154"
           },
           gridLines: {
@@ -64,7 +66,8 @@ const LineChart = ({ labelData, bmiData }) => {
             color: "white"
           },
           ticks: {
-            fontColor: "white",
+            fontFamily: 'Poppins',
+            fontColor: "#f0f0f0",
             fontSize: 20,
             beginAtZero: true
           }
@@ -72,6 +75,7 @@ const LineChart = ({ labelData, bmiData }) => {
       ]
     },
     tooltips: {
+      fontFamily: 'Poppins',
       titleFontSize: 16,
       bodyFontSize: 16
     }
@@ -84,9 +88,5 @@ const LineChart = ({ labelData, bmiData }) => {
   );
 };
 
-LineChart.propTypes = {
-  labelData: PropTypes.array,
-  bmiData: PropTypes.array
-};
 
 export default LineChart;

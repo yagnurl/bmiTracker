@@ -11,6 +11,10 @@ body {
 .text-primary {
   color: #5eaaa8 !important;
 }
+.text-lightgreen {
+  color: #5eaaa8 !important;
+  opacity: 50%;
+}
 
 .text-darkblue {
   color: #172b4d !important;
@@ -49,6 +53,9 @@ body {
 .fs-25 {
   font-size: 25px;
 }
+.fs-35 {
+  font-size: 35px;
+}
 .fs-60 {
   font-size: 60px;
 }
@@ -57,6 +64,9 @@ body {
 }
 .fs-50 {
   font-size: 50px;
+}
+.fs-200 {
+  font-size: 200px;
 }
 
 .btn-primary {

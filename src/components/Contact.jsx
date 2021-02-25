@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import contact from "../data/contact.json";
 import { Card, Container, Row } from "react-bootstrap";
@@ -20,14 +21,14 @@ function Contact() {
         </Card.Title>
         <Card.Text className="mt-5 ">
           <ul className="list-unstyled fw-200 ls-2">
-            <li>
-              <FontAwesomeIcon icon={faPhone} rotation={90} />
+            <li className="mt-2 ls-2">
+              <FontAwesomeIcon className='mr-2' icon={faPhone} rotation={90} />
               {item.phonenum}
             </li>
 
-            <li>     <FontAwesomeIcon icon={faGithub} rotation={90} />  {item.github}</li>
+            <li className="mt-2 ls-2">     <FontAwesomeIcon className='mr-2' icon={faGithub} />  {item.github}</li>
 
-            <li> 📧{item.email}</li>
+            <li className="mt-3 "> <FontAwesomeIcon className='mr-2' icon={faEnvelope} />{item.email}</li>
           </ul>
         </Card.Text>
       </Card.Body>

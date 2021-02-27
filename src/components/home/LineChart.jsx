@@ -9,6 +9,7 @@ const LineChart = ({ labelData, bmiData }) => {
     gradient.addColorStop(0, "#929dd9");
     gradient.addColorStop(1, "#172b4d");
 
+
     // console.log(`bmiData: ${bmiData}`);
     return {
       labels: labelData,
@@ -23,7 +24,8 @@ const LineChart = ({ labelData, bmiData }) => {
           pointRadius: 8,
           pointHoverRadius: 10,
           pointHoverBorderColor: "white",
-          pointHoverBorderWidth: 4
+          pointHoverBorderWidth: 4,
+
         }
       ]
     };
@@ -40,17 +42,21 @@ const LineChart = ({ labelData, bmiData }) => {
             labelString: "DATE",
             fontSize: 25,
             fontColor: "#F2A154",
+
           },
           gridLines: {
             display: false,
-            color: "white"
+            color: "white",
+
           },
 
           ticks: {
             beginAtZero: true,
             fontColor: "#F2A154",
-            fontSize: 16
+            fontSize: 16,
+
           }
+
         }
       ],
       yAxes: [
@@ -70,7 +76,8 @@ const LineChart = ({ labelData, bmiData }) => {
             fontFamily: 'Poppins',
             fontColor: "#f0f0f0",
             fontSize: 20,
-            beginAtZero: true
+            beginAtZero: true,
+
           }
         }
       ]

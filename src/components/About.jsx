@@ -24,6 +24,7 @@ function About() {
       <Row className='col-sm-12'>
         <p className="text-white mt-3">{item.paragraphThree}</p>
       </Row>
+
     </>
   ));
 
@@ -36,6 +37,15 @@ function About() {
       <li className="my-3" key={index}>  {item.features[4]}</li>
     </>
   ));
+  const inFuture = about.info.map((item, index) => (
+    <>
+      <li className="my-3" key={index}>  {item.inFuture[0]}</li>
+      <li className="my-3" key={index}>  {item.inFuture[1]}</li>
+      <li className="my-3" key={index}>  {item.inFuture[2]}</li>
+      <li className="my-3" key={index}>  {item.inFuture[3]}</li>
+      <li className="my-3" key={index}>  {item.inFuture[4]}</li>
+    </>
+  ));
 
   const logosInfo = logos.map((item, index) => (
     <Image className="logo" src={item} rounded />
@@ -45,8 +55,10 @@ function About() {
       <Container className="mt-5">
         {aboutInfo}
         <Row className="d-flex flex-column mt-5 col-sm-12">
-          <h3 className="text-orange">Features</h3>
+          <h3 className="text-orange ls-2">Features</h3>
           <ul className="text-white mt-3 list-unstyled ">{features}</ul>
+          <h3 className="text-orange ls-2 text-right mt-5">In Future</h3>
+          <ul className="text-white mt-3 list-unstyled text-right">{inFuture}</ul>
         </Row>
       </Container>
       <Container fluid>

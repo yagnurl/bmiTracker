@@ -1,8 +1,9 @@
-import React from "react";
-import { Row, Image, Container } from "react-bootstrap";
 import "../styles.css";
+import { Row, Image, Container } from "react-bootstrap";
+import React, { useEffect } from "react";
 import about from "../data/about.json";
 import logos from "../data/logo.js";
+
 
 function About() {
   const aboutInfo = about.info.map((item, index) => (
@@ -28,15 +29,11 @@ function About() {
 
   const features = about.info.map((item, index) => (
     <>
-
       <li className="my-3" key={index}>  {item.features[0]}</li>
       <li className="my-3" key={index}>  {item.features[1]}</li>
       <li className="my-3" key={index}>  {item.features[2]}</li>
       <li className="my-3" key={index}>  {item.features[3]}</li>
       <li className="my-3" key={index}>  {item.features[4]}</li>
-
-
-
     </>
   ));
 
@@ -61,3 +58,4 @@ function About() {
 }
 
 export default About;
+

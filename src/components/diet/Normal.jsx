@@ -24,7 +24,7 @@ function Normal() {
     headers: myHeaders,
     redirect: "follow"
   };
-  
+
   useEffect(() => {
     document.getElementById("root").style.backgroundColor = "#BED9C7";
 

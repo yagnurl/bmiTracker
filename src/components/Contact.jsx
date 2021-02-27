@@ -6,7 +6,19 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import contact from "../data/contact.json";
 import { Card, Container, Row } from "react-bootstrap";
 import "../styles.css";
-
+import Particles from "./Particles";
+const styles = {
+  root: {
+    fontFamily: "sans-serif",
+    textAlign: "center",
+    height: "100%",
+    position: "absolute",
+    background: "#1D2D50",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  }
+};
 function Contact() {
   const infoContact = contact.contact.map((item) => (
     <Card className="d-flex justify-content-center align-items-center bg-none text-white my-5 border-0 col-sm-12 col-md-4">
@@ -35,16 +47,22 @@ function Contact() {
     </Card>
   ));
   return (
-    <Container >
-      <h1 className="text-white text-right mt-5 fs-75 fw-300 ls-5 col-xs-12">
-        CONTACT <span className="text-orange fw-600 "> US</span>{" "}
-      </h1>
-      <Row >
-        <div className="d-flex flex-wrap justify-content-center align-items-center col-md">
-          {infoContact}
-        </div>
-      </Row>
-    </Container>
+    <>
+      <div style={styles.root}>
+        <Particles />
+      </div>
+      <Container >
+
+        <h1 className="text-white text-right mt-5 fs-75 fw-300 ls-5 col-xs-12">
+          CONTACT <span className="text-orange fw-600 "> US</span>{" "}
+        </h1>
+        <Row >
+          <div className="d-flex flex-wrap justify-content-center align-items-center col-md">
+            {infoContact}
+          </div>
+        </Row>
+      </Container>
+    </>
   );
 }
 

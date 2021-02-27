@@ -8,18 +8,21 @@ import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
-import { palette } from '@material-ui/system'
 import '../styles.css'
+
+
 const useStyles = makeStyles((theme) => ({
+  // typography: {
+  //   fontFamily: 'Poppins'
+  // },
   icon: {
     color: "#F2A154 !important"
   },
   root: {
     width: "70%",
-    marginTop: theme.spacing(20),
+    marginTop: theme.spacing(0),
     margin: 'auto',
-
-
+    fontFamily: 'Poppins'
   },
 
   stepper: {

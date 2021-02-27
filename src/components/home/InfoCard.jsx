@@ -8,6 +8,21 @@ import {
   Col
 } from "react-bootstrap";
 
+function setColor(bmi) {
+  if (bmi < 18.5) {
+    return 'blue'
+  }
+  else if (bmi >= 18.5 && bmi < 24.99) {
+    return 'green'
+  }
+  else if (bmi >= 25 && bmi < 29.99) {
+    return 'orange'
+  }
+  else if (bmi >= 30) {
+    return 'red'
+  }
+}
+
 const InfoCard = ({ infos, deleteCard }) => {
   return (
     <>
@@ -75,7 +90,7 @@ const InfoCard = ({ infos, deleteCard }) => {
               </Col>
             </Row>
             <Row className="px-5 ">
-              <p className=" mx-auto text-orange fw-700 fs-25 ls-5">
+              <p className={` ${setColor(info.bmi)} mx-auto fw-700 fs-25 ls-5`}>
                 {info.bmi < 18.5
                   ? " UNDERWEIGHT"
                   : info.bmi > 18.5 && info.bmi < 25
@@ -84,7 +99,7 @@ const InfoCard = ({ infos, deleteCard }) => {
                       ? " OVERWEIGHT"
                       : info.bmi >= 30
                         ? " OBESE"
-                        : "I couldnt find your bmi range"}
+                        : "I could not find your bmi range"}
               </p>
             </Row>
             <Row className="mx-auto col-md-12 ">

@@ -13,7 +13,7 @@ body {
 }
 .text-lightgreen {
   color: #5eaaa8 !important;
-  opacity: 50%;
+
 }
 
 .text-darkblue {
@@ -69,6 +69,18 @@ body {
   font-size: 200px;
 }
 
+.green {
+  color:#348837;
+}
+.red {
+  color:#ec4646;
+}
+.orange {
+  color:#f58634;
+}
+.blue {
+  color:#51c2d5;
+}
 .btn-primary {
   background-color: #5eaaa8 !important;
 }

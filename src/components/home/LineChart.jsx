@@ -8,13 +8,15 @@ const LineChart = ({ labelData, bmiData }) => {
     let gradient = ctx.createLinearGradient(63, 81, 181, 700);
     gradient.addColorStop(0, "#929dd9");
     gradient.addColorStop(1, "#172b4d");
+
     // console.log(`bmiData: ${bmiData}`);
     return {
       labels: labelData,
+
       datasets: [
         {
           label: "Your BMI",
-          fontSize: 18,
+          fontSize: 500,
           data: bmiData,
           backgroundColor: gradient,
           borderColor: "#98acf8",
@@ -35,9 +37,9 @@ const LineChart = ({ labelData, bmiData }) => {
           scaleLabel: {
             margin: '5px',
             display: true,
-            labelString: "Date",
-            fontSize: 20,
-            fontColor: "white"
+            labelString: "DATE",
+            fontSize: 25,
+            fontColor: "#F2A154",
           },
           gridLines: {
             display: false,
@@ -58,7 +60,6 @@ const LineChart = ({ labelData, bmiData }) => {
             display: true,
             labelString: "BODY MASS INDEX",
             fontSize: 25,
-
             fontColor: "#F2A154"
           },
           gridLines: {
